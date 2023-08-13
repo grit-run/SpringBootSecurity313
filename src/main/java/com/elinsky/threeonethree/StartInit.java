@@ -9,7 +9,6 @@
 //import org.springframework.stereotype.Component;
 //import org.springframework.transaction.annotation.Transactional;
 //
-//
 //import java.util.HashSet;
 //import java.util.Set;
 //
@@ -41,21 +40,18 @@
 //        return userRole;
 //    }
 //
-//    @Transactional
+////    @Transactional
 //    @Bean
 //    public void addStartUsers() {
 //        roleService.save(roleAdmin);
 //        roleService.save(roleUser);
 //
-//        User admin = new User("FirstUser", "fu@bk.ru", 34, "admin"
+//        userDetailsService.saveUser(new User("FirstUser", "fu@bk.ru", 34, "admin"
 //                , "Admin",
-//                setAdminRole()); //Admin -> admin
-//        User user = new User("SecondUser", "su@bk,ru", 25,
+//                setAdminRole())); //Admin -> admin
+//        userDetailsService.saveUser(new User("SecondUser", "su@bk,ru", 25,
 //                "user", "User",
-//                setUserRole()); // User -> user
-//
-//        userDetailsService.saveUser(admin);
-//        userDetailsService.saveUser(user);
-//    }
+//                setUserRole())); // User -> user
+//         }
 //}
 //
