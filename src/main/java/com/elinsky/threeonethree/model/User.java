@@ -20,15 +20,15 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "username")
+    @Column(name = "fullname")
     @NotEmpty(message = "field shouldn't be empty")
     @Size(min = 1, max = 31, message = "between 1 and 31 characters")
     private String username;
-    @Column(name = "e-mail")
+    @Column(name = "usermail")
     @NotEmpty(message = "Email should not be empty")
     @Email(message = "Should be valid email address")
     private String email;
-    @Column(name = "age")
+    @Column(name = "userage")
     private Integer age;
     @NotEmpty(message = "Password should not be empty")
     private String password;
