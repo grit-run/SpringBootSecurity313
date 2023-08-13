@@ -1,6 +1,13 @@
 package com.elinsky.threeonethree.model;
 
-import javax.persistence.*;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Column;
+import javax.persistence.GenerationType;
+import javax.persistence.ManyToMany;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
@@ -17,7 +24,7 @@ public class User {
     @NotEmpty(message = "field shouldn't be empty")
     @Size(min = 1, max = 31, message = "between 1 and 31 characters")
     private String username;
-    @Column(name = "email")
+    @Column(name = "e-mail")
     @NotEmpty(message = "Email should not be empty")
     @Email(message = "Should be valid email address")
     private String email;
