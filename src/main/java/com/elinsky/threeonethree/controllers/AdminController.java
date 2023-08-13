@@ -13,6 +13,7 @@ import java.security.Principal;
 import java.util.Set;
 
 @Controller
+@RequestMapping("/admin")
 public class AdminController {
 
     private final UserDetailsServiceImpl userDetailsServiceImpl;
@@ -25,7 +26,7 @@ public class AdminController {
 
 
     @GetMapping("/admin")
-    public String allUserList(ModelMap model, Principal principal) {
+    public String allUsersList(ModelMap model, Principal principal) {
         User user = userDetailsServiceImpl.findByName(principal.getName());
         model.addAttribute("user", user);
         model.addAttribute("users", userDetailsServiceImpl.findAll());
